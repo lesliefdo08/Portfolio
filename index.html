@@ -1,359 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leslie's Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leslie's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
-        body {
-            background-color: #f6ede4;
-            color: #4e342e;
-            font-family: 'Poppins', sans-serif;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            height: 80px;
-            background-color: #a1887f;
-            flex-wrap: wrap;
-        }
+    body {
+      background-color: #f6ede4;
+      color: #4e342e;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        nav .left {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #6d4c41;
-        }
+    /* ---------- NAVBAR ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 70px;
+      background-color: #a1887f;
+    }
 
-        nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
+    .left {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+    }
 
-        nav ul li {
-            list-style: none;
-        }
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #4e342e;
-            font-weight: 500;
-        }
+    .nav-links li {
+      margin: 0 15px;
+    }
 
-        nav ul li a:hover {
-            color: #8d6e63;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: #4e342e;
+      font-weight: 500;
+    }
 
-        main hr {
-            border: 0;
-            background: #bcaaa4;
-            height: 1.2px;
-            margin: 60px 20px;
-        }
+    .nav-links a:hover {
+      color: #fff;
+    }
 
-        .firstSection {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 80px 0;
-            padding: 20px;
-            text-align: center;
-        }
+    /* Hamburger button (hidden on desktop) */
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #fff;
+      background: none;
+      border: none;
+    }
 
-        .leftSection {
-            width: 100%;
-            max-width: 600px;
-            font-size: 2.2rem;
-            padding: 20px 0;
-        }
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        width: 100%;
+        background-color: #a1887f;
+        text-align: left;
+        transition: left 0.3s ease-in-out;
+        padding: 15px 0;
+      }
 
-        .rightSection {
-            width: 100%;
-            max-width: 400px;
-        }
+      .nav-links li {
+        margin: 12px 20px;
+      }
 
-        .rightSection img {
-            width: 100%;
-            height: auto;
-        }
+      .nav-links.active {
+        left: 0;
+      }
 
-        .purple {
-            color: #8d6e63;
-        }
+      .hamburger {
+        display: block;
+      }
+    }
 
-        #element {
-            color: #8d6e63;
-            display: block;
-            margin-top: 10px;
-            font-size: 1.8rem;
-        }
+    /* ---------- MAIN CONTENT ---------- */
+    main hr {
+      border: 0;
+      background: #bcaaa4;
+      height: 1.2px;
+      margin: 60px 84px;
+    }
 
-        .secondSection {
-            width: 90%;
-            margin: auto;
-        }
+    .firstSection {
+      display: flex;
+      justify-content: space-around;
+      margin: 100px 0;
+      align-items: center;
+      padding: 20px;
+    }
 
-        .secondSection h1 {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            color: #6d4c41;
-        }
+    .firstSection > div {
+      width: 30%;
+    }
 
-        .text-grey {
-            color: #a1887f;
-        }
+    .leftSection {
+      width: 50%;
+      font-size: 3rem;
+      padding: 20px;
+      text-align: center;
+    }
 
-        table {
-            width: 100%;
-            margin-top: 40px;
-            background: linear-gradient(90deg, #d7ccc8 0%, #f6ede4 100%);
-            color: #4e342e;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border-collapse: separate;
-            border-spacing: 0;
-            overflow-x: auto;
-        }
+    .rightSection img {
+      width: 80%;
+      margin: 50px 0;
+    }
 
-        table thead tr {
-            background: linear-gradient(90deg, #8d6e63 0%, #a1887f 100%);
-            color: white;
-        }
+    .purple {
+      color: #8d6e63;
+    }
 
-        table th,
-        table td {
-            padding: 12px;
-            text-align: left;
-        }
+    .text-grey {
+      color: #a1887f;
+    }
 
-        table th:first-child {
-            border-top-left-radius: 8px;
-        }
+    #element {
+      color: #8d6e63;
+    }
 
-        table th:last-child {
-            border-top-right-radius: 8px;
-        }
+    .secondSection {
+      max-width: 80vw;
+      margin: auto;
+      padding: 40px 0;
+    }
 
-        table tr:nth-child(even) {
-            background: #bcaaa4;
-        }
+    .secondSection h1 {
+      font-size: 1.8rem;
+      color: #6d4c41;
+    }
 
-        footer {
-            background-color: #6d4c41;
-            padding: 40px 20px;
-            color: #f6ede4;
-        }
+    .secondSection table {
+      width: 100%;
+      margin-top: 40px;
+      background: linear-gradient(90deg, #d7ccc8 0%, #f6ede4 100%);
+      color: #4e342e;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-collapse: separate;
+      border-spacing: 0;
+    }
 
-        .footer {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
+    .secondSection thead tr {
+      background: linear-gradient(90deg, #8d6e63 0%, #a1887f 100%);
+      color: white;
+    }
 
-        .footer-first {
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
+    .secondSection th,
+    .secondSection td {
+      padding: 12px;
+    }
 
-        .footer div ul {
-            list-style: none;
-            padding: 0;
-        }
+    /* Make table scrollable on small screens */
+    @media (max-width: 600px) {
+      .secondSection table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
 
-        .footer li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
-        }
+    /* ---------- FOOTER ---------- */
+    footer {
+      background-color: #6d4c41;
+      padding: 40px 20px;
+      color: #f6ede4;
+    }
 
-        .footer span:first-child {
-            background: #a1887f;
-            color: white;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-weight: 500;
-            margin-right: 8px;
-        }
+    .footer-first {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
 
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-                margin-top: 10px;
-            }
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
 
-            .firstSection {
-                flex-direction: column;
-            }
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
 
-            .leftSection {
-                font-size: 1.8rem;
-            }
+    .footer li {
+      display: flex;
+      align-items: center;
+    }
 
-            #element {
-                font-size: 1.5rem;
-            }
-
-            .secondSection h1 {
-                font-size: 1.3rem;
-            }
-
-            .footer {
-                gap: 16px;
-            }
-
-            .footer-first {
-                font-size: 1.5rem;
-            }
-
-            table th,
-            table td {
-                font-size: 0.9rem;
-            }
-
-            @media (max-width: 768px) {
-                nav {
-                    flex-direction: column;
-                    height: auto;
-                    padding: 15px;
-                    align-items: flex-start;
-                }
-
-                nav .left {
-                    margin-bottom: 10px;
-                    font-size: 1.2rem;
-                }
-
-                nav ul {
-                    flex-direction: column;
-                    width: 100%;
-                    align-items: flex-start;
-                    gap: 12px;
-                }
-
-                nav ul li {
-                    margin: 5px 0;
-                }
-
-                nav ul li a {
-                    display: block;
-                    width: 100%;
-                    padding: 8px 0;
-                }
-            }
-        }
-    </style>
+    .footer li span:first-child {
+      background: #a1887f;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-right: 8px;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left">Leslie's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="left">Leslie's Portfolio</div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About Me</a></li>
+        <li><a href="/">Projects</a></li>
+        <li><a href="/">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hello, I'm <span class="purple">Leslie</span>
-                <div>I'm a passionate</div>
-                <span id="element"></span>
-            </div>
-            <div class="rightSection">
-                <img src="imgcb.png" alt="Leslie's image">
-            </div>
-        </section>
+  <main>
+    <section class="firstSection">
+      <div class="leftSection">
+        Hello, I'm <span class="purple">Leslie</span>
+        <div>I'm a passionate</div>
+        <span id="element"></span>
+      </div>
+      <div class="rightSection">
+        <img src="imgcb.png" alt="Profile picture">
+      </div>
+    </section>
+    <hr>
+    <section class="secondSection">
+      <span class="text-grey">Work that I have completed so far</span>
+      <h1>Work Experience</h1>
 
-        <hr>
+      <table>
+        <thead>
+          <tr>
+            <th>Internship</th>
+            <th>Year</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Web Development Intern</td>
+            <td>Feb 2025 - Mar 2025</td>
+            <td>Worked on building responsive web pages and collaborating with the team to deliver client projects.</td>
+          </tr>
+          <tr style="background:#bcaaa4;">
+            <td>Cybersecurity Trainee</td>
+            <td>Jan 2024 - Feb 2024</td>
+            <td>Assisted in vulnerability assessments and learned about network security protocols.</td>
+          </tr>
+          <tr>
+            <td>Video Editor Intern</td>
+            <td>Jun 2023 - Aug 2023</td>
+            <td>Edited promotional videos and contributed creative ideas for content improvement.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 
-        <section class="secondSection">
-            <span class="text-grey">Work that I have completed so far</span>
-            <h1>Work Experience</h1>
+  <footer>
+    <div class="footer-first">Socials</div>
+    <div class="footer">
+      <ul>
+        <li><span>📞</span>9082644453</li>
+      </ul>
+      <ul>
+        <li><span>🔗</span>LinkedIn - lesliefo</li>
+      </ul>
+      <ul>
+        <li><span>✉️</span>lesliefernando68@gmail.com</li>
+      </ul>
+    </div>
+  </footer>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Internship</th>
-                        <th>Year</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Web Development Intern</td>
-                        <td>Feb 2025 - Mar 2025</td>
-                        <td>Worked on building responsive web pages and collaborating with the team to deliver client
-                            projects.</td>
-                    </tr>
-                    <tr>
-                        <td>Cybersecurity Trainee</td>
-                        <td>Jan 2024 - Feb 2024</td>
-                        <td>Assisted in vulnerability assessments and learned about network security protocols.</td>
-                    </tr>
-                    <tr>
-                        <td>Video Editor Intern</td>
-                        <td>Jun 2023 - Aug 2023</td>
-                        <td>Edited promotional videos and contributed creative ideas for content improvement.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+  <!-- Typed.js for typing effect -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Cybersecurity Analyst', 'Musician', 'Psychology Enthusiast', 'Video Editor'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    });
 
-    <footer>
-        <div class="footer">
-            <div class="footer-first">Socials</div>
-            <div>
-                <ul>
-                    <li>
-                        <span>📞</span>
-                        <span>9082644453</span>
-                    </li>
-                    <li>
-                        <span>🔗</span>
-                        <span>LinkedIn - lesliefo</span>
-                    </li>
-                    <li>
-                        <span>✉️</span>
-                        <span>lesliefernando68@gmail.com</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Cybersecurity Analyst', 'Musician', 'Psychology Enthusiast', 'Video Editor'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true
-        });
-    </script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
 </body>
-
 </html>
