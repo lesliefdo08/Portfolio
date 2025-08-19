@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
         * {
@@ -24,20 +24,28 @@
 
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            height: 100px;
+            padding: 0 20px;
+            height: 80px;
             background-color: #a1887f;
+            flex-wrap: wrap;
+        }
+
+        nav .left {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #6d4c41;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         nav ul li {
             list-style: none;
-            margin: 0 23px;
         }
 
         nav ul li a {
@@ -54,114 +62,168 @@
             border: 0;
             background: #bcaaa4;
             height: 1.2px;
-            margin: 60px 84px;
-        }
-
-        .left {
-            font-size: 1.5rem;
-            color: #6d4c41;
+            margin: 60px 20px;
         }
 
         .firstSection {
             display: flex;
-            justify-content: space-around;
-            margin: 100px 0;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .firstSection>div {
-            width: 30%;
-        }
-
-        .leftSection {
-            width: 50%;
-            font-size: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 80px 0;
             padding: 20px;
             text-align: center;
         }
 
+        .leftSection {
+            width: 100%;
+            max-width: 600px;
+            font-size: 2.2rem;
+            padding: 20px 0;
+        }
+
+        .rightSection {
+            width: 100%;
+            max-width: 400px;
+        }
+
         .rightSection img {
-            width: 80%;
-            margin: 50px 0;
+            width: 100%;
+            height: auto;
         }
 
         .purple {
             color: #8d6e63;
         }
 
-        .text-grey {
-            color: #a1887f;
-        }
-
         #element {
             color: #8d6e63;
+            display: block;
+            margin-top: 10px;
+            font-size: 1.8rem;
         }
 
         .secondSection {
-            max-width: 80vw;
-            height: 80vh;
+            width: 90%;
             margin: auto;
         }
 
         .secondSection h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            margin-top: 20px;
             color: #6d4c41;
         }
 
-        .secondSection .box {
-            background: #bcaaa4;
-            width: 80vw;
-            height: 2px;
-            margin: 56px 0;
-        }
-
-        .secondSection .vertical {
-            height: 93px;
-            width: 1px;
-            background-color: #bcaaa4;
-            margin: 0 100px;
-        }
-
-        .image-top {
-            width: 23px;
-            position: relative;
-            top: -32px;
-            left: -9px;
-        }
-
-        .vertical-title {
-            position: relative;
-            top: 75px;
-            left: 150px;
-        }
-
-        .vertical-desc {
-            position: relative;
-            top: 86px;
+        .text-grey {
             color: #a1887f;
-            width: 150px;
-            font-size: 9px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 40px;
+            background: linear-gradient(90deg, #d7ccc8 0%, #f6ede4 100%);
+            color: #4e342e;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-collapse: separate;
+            border-spacing: 0;
+            overflow-x: auto;
+        }
+
+        table thead tr {
+            background: linear-gradient(90deg, #8d6e63 0%, #a1887f 100%);
+            color: white;
+        }
+
+        table th,
+        table td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th:first-child {
+            border-top-left-radius: 8px;
+        }
+
+        table th:last-child {
+            border-top-right-radius: 8px;
+        }
+
+        table tr:nth-child(even) {
+            background: #bcaaa4;
         }
 
         footer {
             background-color: #6d4c41;
-            height: 233px;
+            padding: 40px 20px;
+            color: #f6ede4;
         }
 
         .footer {
             display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
+            flex-direction: column;
+            gap: 24px;
         }
 
-        .footer ul {
+        .footer-first {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .footer div ul {
             list-style: none;
+            padding: 0;
         }
 
-        .footer-first{
-            font-size: 1.3rem;
-            color: #d7ccc8;
+        .footer li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .footer span:first-child {
+            background: #a1887f;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 500;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .firstSection {
+                flex-direction: column;
+            }
+
+            .leftSection {
+                font-size: 1.8rem;
+            }
+
+            #element {
+                font-size: 1.5rem;
+            }
+
+            .secondSection h1 {
+                font-size: 1.3rem;
+            }
+
+            .footer {
+                gap: 16px;
+            }
+
+            .footer-first {
+                font-size: 1.5rem;
+            }
+
+            table th, table td {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -172,10 +234,10 @@
             <div class="left">Leslie's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About Me</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -185,97 +247,78 @@
         <section class="firstSection">
             <div class="leftSection">
                 Hello, I'm <span class="purple">Leslie</span>
-
                 <div>I'm a passionate</div>
                 <span id="element"></span>
             </div>
             <div class="rightSection">
-                <img src="imgcb.png" alt="" style="width:80%; height:auto;">
+                <img src="imgcb.png" alt="Leslie's image">
             </div>
         </section>
+
         <hr>
+
         <section class="secondSection">
             <span class="text-grey">Work that I have completed so far</span>
             <h1>Work Experience</h1>
 
-    <table
-        style="width:100%; margin-top:40px; background:linear-gradient(90deg, #d7ccc8 0%, #f6ede4 100%); color:#4e342e; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); border-collapse:separate; border-spacing:0;">
-        <thead>
-            <tr style="background:linear-gradient(90deg, #8d6e63 0%, #a1887f 100%); color:white;">
-                <th style="padding:12px; border-top-left-radius:8px;">Internship</th>
-                <th style="padding:12px;">Year</th>
-                <th style="padding:12px; border-top-right-radius:8px;">Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td style="padding:12px;">Web Development Intern</td>
-                <td style="padding:12px;">Feb 2025 - Mar 2025</td>
-                <td style="padding:12px;">Worked on building responsive web pages and collaborating with the
-                    team to deliver client projects.</td>
-            </tr>
-            <tr style="background:#bcaaa4;">
-                <td style="padding:12px;">Cybersecurity Trainee</td>
-                <td style="padding:12px;">Jan 2024 - Feb 2024</td>
-                <td style="padding:12px;">Assisted in vulnerability assessments and learned about network security
-                    protocols.</td>
-            </tr>
-            <tr>
-                <td style="padding:12px;">Video Editor Intern</td>
-                <td style="padding:12px;">Jun 2023 - Aug 2023</td>
-                <td style="padding:12px;">Edited promotional videos and contributed creative ideas for content
-                    improvement.</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Internship</th>
+                        <th>Year</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development Intern</td>
+                        <td>Feb 2025 - Mar 2025</td>
+                        <td>Worked on building responsive web pages and collaborating with the team to deliver client projects.</td>
+                    </tr>
+                    <tr>
+                        <td>Cybersecurity Trainee</td>
+                        <td>Jan 2024 - Feb 2024</td>
+                        <td>Assisted in vulnerability assessments and learned about network security protocols.</td>
+                    </tr>
+                    <tr>
+                        <td>Video Editor Intern</td>
+                        <td>Jun 2023 - Aug 2023</td>
+                        <td>Edited promotional videos and contributed creative ideas for content improvement.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <footer>
-    <footer>
-        <div class="footer" style="flex-direction: column; align-items: flex-start; padding: 40px 122px; color: #f6ede4;">
-            <div class="footer-first" style="font-size: 2rem; font-weight: 700; margin-bottom: 24px; color: #f6ede4;">
-                Socials
-            </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 32px;">
-                <div>
-                    <ul style="list-style: none; padding: 0;">
-                        <li>
-                            <span style="background: #a1887f; color: #ffffff; padding: 6px 14px; border-radius: 20px; font-weight: 500; margin-right: 8px;">
-                                📞
-                            </span>
-                            <span style="font-size: 1.05rem; color: #f6ede4;">9082644453</span>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul style="list-style: none; padding: 0;">
-                        <li>
-                            <span style="background: #a1887f; color: #bd4242; padding: 6px 14px; border-radius: 20px; font-weight: 500; margin-right: 8px;">
-                                🔗
-                            </span>
-                            <span style="font-size: 1.05rem; color: #f6ede4;">LinkedIn - lesliefo</span>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul style="list-style: none; padding: 0;">
-                        <li>
-                            <span style="background: #8d6e63; color: #fff; padding: 6px 14px; border-radius: 20px; font-weight: 500; margin-right: 8px;">
-                                ✉️
-                            </span>
-                            <span style="font-size: 1.05rem; color: #f6ede4;">lesliefernando68@gmail.com</span>
-                        </li>
-                    </ul>
-                </div>
+        <div class="footer">
+            <div class="footer-first">Socials</div>
+            <div>
+                <ul>
+                    <li>
+                        <span>📞</span>
+                        <span>9082644453</span>
+                    </li>
+                    <li>
+                        <span>🔗</span>
+                        <span>LinkedIn - lesliefo</span>
+                    </li>
+                    <li>
+                        <span>✉️</span>
+                        <span>lesliefernando68@gmail.com</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
             strings: ['Cybersecurity Analyst', 'Musician', 'Psychology Enthusiast', 'Video Editor'],
             typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
         });
     </script>
 </body>
