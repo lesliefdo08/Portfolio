@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leslie's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
         * {
@@ -123,7 +123,7 @@
             background: linear-gradient(90deg, #d7ccc8 0%, #f6ede4 100%);
             color: #4e342e;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             border-collapse: separate;
             border-spacing: 0;
             overflow-x: auto;
@@ -221,8 +221,40 @@
                 font-size: 1.5rem;
             }
 
-            table th, table td {
+            table th,
+            table td {
                 font-size: 0.9rem;
+            }
+
+            @media (max-width: 768px) {
+                nav {
+                    flex-direction: column;
+                    height: auto;
+                    padding: 15px;
+                    align-items: flex-start;
+                }
+
+                nav .left {
+                    margin-bottom: 10px;
+                    font-size: 1.2rem;
+                }
+
+                nav ul {
+                    flex-direction: column;
+                    width: 100%;
+                    align-items: flex-start;
+                    gap: 12px;
+                }
+
+                nav ul li {
+                    margin: 5px 0;
+                }
+
+                nav ul li a {
+                    display: block;
+                    width: 100%;
+                    padding: 8px 0;
+                }
             }
         }
     </style>
@@ -273,7 +305,8 @@
                     <tr>
                         <td>Web Development Intern</td>
                         <td>Feb 2025 - Mar 2025</td>
-                        <td>Worked on building responsive web pages and collaborating with the team to deliver client projects.</td>
+                        <td>Worked on building responsive web pages and collaborating with the team to deliver client
+                            projects.</td>
                     </tr>
                     <tr>
                         <td>Cybersecurity Trainee</td>
@@ -322,4 +355,5 @@
         });
     </script>
 </body>
+
 </html>
