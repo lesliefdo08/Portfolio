@@ -29,12 +29,158 @@ button:hover {
     transform: scale(1.05);
 }
 
-header {
-    background: linear-gradient(to right, #3a7bd5, #3a6073);
-    padding: 15px 20px;
-    text-align: center;
+/* Navigation base */
+nav {
     position: relative;
-    z-index: 2002;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: linear-gradient(to right, #3a7bd5, #3a6073);
+}
+nav {
+    position: relative;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: linear-gradient(to right, #3a7bd5, #3a6073);
+}
+
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    background: linear-gradient(to right, #3a7bd5, #3a6073);
+    flex-direction: column;
+    list-style: none;
+    padding: 70px 20px 20px 20px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links.active {
+    right: 0;
+}
+
+.nav-links li {
+    margin: 20px 0;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #cfe8fc;
+}
+
+.hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+@media(min-width: 769px) {
+    .nav-links {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+        right: 0 !important;
+        transition: none;
+        display: flex !important;
+    }
+    .nav-links li {
+        margin: 0 15px;
+    }
+    .hamburger {
+        display: none;
+    }
+}
+/* Nav links hidden off-canvas on the right */
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px; /* hidden outside viewport */
+    height: 100vh;
+    width: 250px;
+    background: linear-gradient(to right, #3a7bd5, #3a6073);
+    flex-direction: column;
+    list-style: none;
+    padding: 70px 20px 20px 20px; /* top padding for header space */
+    transition: right 0.3s ease-in-out;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu shown state */
+.nav-links.active {
+    right: 0;
+}
+
+/* Each link styling */
+.nav-links li {
+    margin: 20px 0;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #cfe8fc;
+}
+
+/* Hamburger button styling */
+.hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1100; /* above everything */
+}
+
+/* Hide default nav-links on wider screens - optional */
+@media(min-width: 769px) {
+    .nav-links {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+        right: 0 !important;
+        transition: none;
+        display: flex !important;
+    }
+    .nav-links li {
+        margin: 0 15px;
+    }
+    .hamburger {
+        display: none;
+    }
 }
 nav {
     display: flex;
