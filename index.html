@@ -5,256 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leslie's Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #f6ede4;
-            color: #4e342e;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* ---------- NAVBAR ---------- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            height: 70px;
-            background-color: #a1887f;
-        }
-
-        .left {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #fff;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin: 0 15px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #4e342e;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #fff;
-        }
-
-        /* Hamburger button (hidden on desktop) */
-        .hamburger {
-            display: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #fff;
-            background: none;
-            border: none;
-        }
-
-        /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 768px) {
-            .nav-links {
-                position: absolute;
-                top: 70px;
-                left: -100%;
-                flex-direction: column;
-                width: 100%;
-                background-color: #a1887f;
-                text-align: left;
-                transition: left 0.3s ease-in-out;
-                padding: 15px 0;
-            }
-
-            .nav-links li {
-                margin: 12px 20px;
-            }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .hamburger {
-                display: block;
-            }
-        }
-
-        /* ---------- MAIN CONTENT ---------- */
-        main hr {
-            border: 0;
-            background: #bcaaa4;
-            height: 1.2px;
-            margin: 60px 84px;
-        }
-
-        .firstSection {
-            display: flex;
-            justify-content: space-around;
-            margin: 100px 0;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .firstSection>div {
-            width: 30%;
-        }
-
-        .leftSection {
-            width: 50%;
-            font-size: 3rem;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .rightSection img {
-            width: 80%;
-            margin: 50px 0;
-        }
-
-        .purple {
-            color: #8d6e63;
-        }
-
-        .text-grey {
-            color: #a1887f;
-        }
-
-        #element {
-            color: #8d6e63;
-        }
-
-        .secondSection {
-            max-width: 80vw;
-            margin: auto;
-            padding: 40px 0;
-        }
-
-        .secondSection h1 {
-            font-size: 1.8rem;
-            color: #6d4c41;
-        }
-
-        .secondSection table {
-            width: 100%;
-            margin-top: 40px;
-            background: linear-gradient(90deg, #d7ccc8 0%, #f6ede4 100%);
-            color: #4e342e;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border-collapse: separate;
-            border-spacing: 0;
-        }
-
-        .secondSection thead tr {
-            background: linear-gradient(90deg, #8d6e63 0%, #a1887f 100%);
-            color: white;
-        }
-
-        .secondSection th,
-        .secondSection td {
-            padding: 12px;
-        }
-
-        /* Make table scrollable on small screens */
-        @media (max-width: 600px) {
-            .secondSection table {
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
-            }
-        }
-
-        /* ---------- FOOTER ---------- */
-        footer {
-            background-color: #6d4c41;
-            padding: 40px 20px;
-            color: #f6ede4;
-        }
-
-        .footer-first {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-
-        .footer {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 32px;
-        }
-
-        .footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer li {
-            display: flex;
-            align-items: center;
-        }
-
-        .footer li span:first-child {
-            background: #a1887f;
-            color: #fff;
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin-right: 8px;
-        }
-
-        /* ---------- Responsive Fix for First Section ---------- */
-        @media (max-width: 900px) {
-            .firstSection {
-                flex-direction: column;
-                margin: 50px 0;
-                text-align: center;
-            }
-
-            .firstSection>div {
-                width: 100%;
-            }
-
-            .leftSection {
-                font-size: 2rem;
-                /* smaller text on tablet */
-                padding: 10px;
-            }
-
-            .rightSection img {
-                width: 70%;
-                max-width: 300px;
-                margin: 20px auto;
-                display: block;
-            }
-        }
-
-        @media (max-width: 500px) {
-            .leftSection {
-                font-size: 1.5rem;
-                /* even smaller for phone */
-            }
-
-            .rightSection img {
-                width: 85%;
-                max-width: 250px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -263,14 +17,15 @@
             <div class="left">Leslie's Portfolio</div>
             <button class="hamburger" onclick="toggleMenu()">☰</button>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/">About Me</a></li>
-                <li><a href="/">Projects</a></li>
-                <li><a href="/">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
             </ul>
+
         </nav>
     </header>
-
     <main>
         <section class="firstSection">
             <div class="leftSection">
@@ -286,37 +41,34 @@
         <section class="secondSection">
             <span class="text-grey">Work that I have completed so far</span>
             <h1>Work Experience</h1>
-
             <table>
                 <thead>
                     <tr>
-                        <th>Internship</th>
-                        <th>Year</th>
+                        <th>Organization</th>
+                        <th>Role</th>
+                        <th>Period</th>
                         <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>Prodigy Infotech</td>
+                        <td>Cybersecurity Intern</td>
+                        <td>July 2025</td>
+                        <td>Worked on Python-based cybersecurity projects and ethical hacking.</td>
+                    </tr>
+                    <tr style="background:#cfe8fc;">
+                        <td>Suvidha Foundation</td>
                         <td>Web Development Intern</td>
                         <td>Feb 2025 - Mar 2025</td>
-                        <td>Worked on building responsive web pages and collaborating with the team to deliver client
-                            projects.</td>
+                        <td>Developed a responsive internship portal for web applications.</td>
                     </tr>
-                    <tr style="background:#bcaaa4;">
-                        <td>Cybersecurity Trainee</td>
-                        <td>Jan 2024 - Feb 2024</td>
-                        <td>Assisted in vulnerability assessments and learned about network security protocols.</td>
-                    </tr>
-                    <tr>
-                        <td>Video Editor Intern</td>
-                        <td>Jun 2023 - Aug 2023</td>
-                        <td>Edited promotional videos and contributed creative ideas for content improvement.</td>
-                    </tr>
+                </tbody>
+                </tr>
                 </tbody>
             </table>
         </section>
     </main>
-
     <footer>
         <div class="footer-first">Socials</div>
         <div class="footer">
@@ -324,27 +76,17 @@
                 <li><span>📞</span>9082644453</li>
             </ul>
             <ul>
-                <li><span>🔗</span>LinkedIn - lesliefo</li>
+                <li><span>🔗</span>LinkedIn - lesliefdo</li>
             </ul>
             <ul>
                 <li><span>✉️</span>lesliefernando68@gmail.com</li>
             </ul>
         </div>
     </footer>
-
-    <!-- Typed.js for typing effect -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-        var typed = new Typed('#element', {
-            strings: ['Cybersecurity Analyst', 'Musician', 'Psychology Enthusiast', 'Video Editor'],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true
-        });
-
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
+        var typed = new Typed('#element', { strings: ['Cybersecurity Analyst', 'Musician', 'Psychology Enthusiast', 'Video Editor'], typeSpeed: 50, backSpeed: 50, loop: true })
+        function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active') }
     </script>
 </body>
 
