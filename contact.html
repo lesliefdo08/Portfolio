@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leslie's Portfolio - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Contact</div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Get in Touch</h1>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="icon">📞</span>
+                <span class="text">9082644453</span>
+            </div>
+            <div class="contact-item">
+                <span class="icon">🔗</span>
+                <span class="text">LinkedIn - lesliefdo</span>
+            </div>
+            <div class="contact-item">
+                <span class="icon">✉️</span>
+                <span class="text">lesliefernando68@gmail.com</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 Leslie's Portfolio
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
