@@ -85,10 +85,18 @@
     </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
+        var typed = new Typed('#element', {
+            strings: ['Cybersecurity Analyst', 'Musician', 'Psychology Enthusiast', 'Video Editor'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+
         function toggleMenu() {
             document.querySelector('.nav-links').classList.toggle('active');
         }
     </script>
+
 
 </body>
 
